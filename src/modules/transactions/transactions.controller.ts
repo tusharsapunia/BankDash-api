@@ -22,7 +22,7 @@ export class TransactionsController {
   @UseGuards(AuthGuard('jwt'))
   @Post()
   async addTransaction(@Request() req: any, @Body() body: AddTransactionDto) {
-    return this.TransactionService.addtransaction(req.user.userID, body);
+    return this.TransactionService.addtransaction(req.user.userId, body);
   }
 
   @UseGuards(AuthGuard('jwt'))
